@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="light-mode">
+    <nav>
+        <div class="logo">Quiz<span>Master</span></div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <main class="container">
+        <header class="hero-section">
+            <h1>Ready to test your brain?</h1>
+            <p>Select a category below to start your challenge.</p>
+        </header>
+
+        <div class="category-grid">
+            <div class="card" onclick="location.href='/quiz/science'">
+                <div class="icon-wrapper">
+                    <i class="fas fa-flask icon-science"></i>
+                </div>
+                <h3>Science</h3>
+                <p>Explore the wonders of the universe.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
+            </div>
+
+            <div class="card" onclick="location.href='/quiz/math'">
+                <div class="icon-wrapper">
+                    <i class="fas fa-calculator icon-math"></i>
+                </div>
+                <h3>Math</h3>
+                <p>Numbers, logic, and equations.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
+            </div>
+
+            <div class="card" onclick="location.href='/quiz/history'">
+                <div class="icon-wrapper">
+                    <i class="fas fa-monument icon-history"></i>
+                </div>
+                <h3>History</h3>
+                <p>Journey through the past.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
+            </div>
+
+            <div class="card" onclick="location.href='/quiz/general'">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe icon-general"></i>
+                </div>
+                <h3>General</h3>
+                <p>Mixed trivia for everyone.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
