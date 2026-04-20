@@ -10,35 +10,52 @@
 <body class="light-mode">
     <nav>
         <div class="logo">Quiz<span>Master</span></div>
-        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
     </nav>
 
     <main class="container">
-        <header>
-            <h1>Choose Your Challenge</h1>
-            <p>Test your knowledge across various subjects!</p>
+        <header class="hero-section">
+            <h1>Ready to test your brain?</h1>
+            <p>Select a category below to start your challenge.</p>
         </header>
 
         <div class="category-grid">
             <div class="card" onclick="location.href='/quiz/science'">
-                <i class="fas fa-flask icon-science"></i>
+                <div class="icon-wrapper">
+                    <i class="fas fa-flask icon-science"></i>
+                </div>
                 <h3>Science</h3>
-                <p>Biology, Chemistry, Physics</p>
+                <p>Explore the wonders of the universe.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
             </div>
+
             <div class="card" onclick="location.href='/quiz/math'">
-                <i class="fas fa-calculator icon-math"></i>
+                <div class="icon-wrapper">
+                    <i class="fas fa-calculator icon-math"></i>
+                </div>
                 <h3>Math</h3>
-                <p>Algebra, Geometry, Logic</p>
+                <p>Numbers, logic, and equations.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
             </div>
+
             <div class="card" onclick="location.href='/quiz/history'">
-                <i class="fas fa-monument icon-history"></i>
+                <div class="icon-wrapper">
+                    <i class="fas fa-monument icon-history"></i>
+                </div>
                 <h3>History</h3>
-                <p>World Events & Figures</p>
+                <p>Journey through the past.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
             </div>
+
             <div class="card" onclick="location.href='/quiz/general'">
-                <i class="fas fa-globe icon-general"></i>
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe icon-general"></i>
+                </div>
                 <h3>General</h3>
-                <p>Mixed Trivia</p>
+                <p>Mixed trivia for everyone.</p>
+                <span class="play-hint">Play Now <i class="fas fa-chevron-right"></i></span>
             </div>
         </div>
     </main>
