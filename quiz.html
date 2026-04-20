@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Playing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="light-mode">
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <span id="subject-title">Subject</span>
+            <div id="timer">00:15</div>
+        </div>
+        
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="question-box" class="card">
+            <h2 id="question-text">Loading Question...</h2>
+            <div id="options-container" class="options-list">
+                </div>
+        </div>
+
+        <div class="quiz-footer">
+            <span id="question-count">Question 1 of 10</span>
+            <button id="next-btn" class="btn hidden">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const SUBJECT = "{{ subject }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
