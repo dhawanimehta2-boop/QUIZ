@@ -1,0 +1,98 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --primary: #6c63ff;
+    --secondary: #4caf50;
+    --accent: #ff6b6b;
+}
+
+.dark-mode {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --text-color: #e9ecef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--primary); }
+
+/* Cards */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Icons */
+.card i { font-size: 3rem; margin-bottom: 1rem; }
+.icon-science { color: #00d2ff; }
+.icon-math { color: #ff9f43; }
+.icon-history { color: #ee5253; }
+.icon-general { color: #10ac84; }
+
+/* Quiz Styles */
+.quiz-container { max-width: 600px; margin: 50px auto; padding: 20px; }
+.progress-container { background: #ddd; height: 10px; border-radius: 5px; margin: 20px 0; overflow: hidden; }
+#progress-bar { background: var(--primary); height: 100%; width: 0%; transition: width 0.3s; }
+
+.options-list { margin-top: 20px; }
+.option {
+    background: var(--bg-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.option:hover { border-color: var(--primary); }
+.option.correct { background: #d4edda; color: #155724; }
+.option.wrong { background: #f8d7da; color: #721c24; }
+
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hidden { display: none; }
