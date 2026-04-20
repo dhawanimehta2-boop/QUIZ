@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="result-container card">
+        <i class="fas fa-trophy result-icon"></i>
+        <h1>Quiz Completed!</h1>
+        <div class="score-circle">
+            <span id="final-score">0</span>
+        </div>
+        <p id="score-text">Great effort!</p>
+        <button class="btn" onclick="location.href='/'">Try Another Subject</button>
+    </div>
+    <script>
+        document.getElementById('final-score').innerText = localStorage.getItem('lastScore') || 0;
+    </script>
+</body>
+</html>
